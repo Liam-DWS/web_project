@@ -1,0 +1,43 @@
+/* Frame.css */
+
+/* Remove default margin and padding from the ul */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; /* Remove default list styling */
+    background-color: #333; /* Example background color */
+    overflow: hidden; /* Clear floated li elements */
+    position: fixed; /* Fixed position to stay on top */
+    width: 100%; /* Full width */
+    top: 0; /* Stick to the top */
+    left: 0; /* Align left */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Style for each list item */
+ul li {
+    display: inline-block; /* Display items inline */
+    margin-right: -4px; /* Remove the gap between inline-block elements */
+}
+
+/* Style for each link */
+ul li a {
+    display: block; /* Make the links fill the li element */
+    text-align: center; /* Center text */
+    padding: 14px 16px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Example text color */
+}
+
+/* Add a hover effect */
+ul li a:hover {
+    background-color: #111; /* Example hover color */
+}
+
+/* Responsive design: Stacking tabs for small screens */
+@media screen and (max-width: 600px) {
+    ul li {
+        display: block; /* Stack the items vertically */
+    }
+}
+
