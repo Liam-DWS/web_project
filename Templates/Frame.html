@@ -1,48 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--
-<style>
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none; /* Remove default list styling */
-    background-color: #333; /* Example background color */
-    overflow: hidden; /* Clear floated li elements */
-    position: fixed; /* Fixed position to stay on top */
-    width: 100%; /* Full width */
-    top: 0; /* Stick to the top */
-    left: 0; /* Align left */
-    z-index: 1000; /* Ensure it's above other content */
-  }
-
-  /* Style for each list item */
-  ul li {
-    display: inline-block; /* Display items inline */
-    margin-right: -4px; /* Remove the gap between inline-block elements */
-  }
-
-  /* Style for each link */
-  ul li a {
-    display: block; /* Make the links fill the li element */
-    text-align: center; /* Center text */
-    padding: 14px 16px; /* Add some padding */
-    text-decoration: none; /* Remove underline from links */
-    color: white; /* Example text color */
-  }
-
-  /* Add a hover effect */
-  ul li a:hover {
-    background-color: #111; /* Example hover color */
-  }
-
-  /* Responsive design: Stacking tabs for small screens */
-  @media screen and (max-width: 600px) {
-    ul li {
-        display: block; /* Stack the items vertically */
-    }
-} </style> -->
-
 <head>
   <meta charset=" UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,26 +10,46 @@
 
 <body>
   <header>
-    <!-- Navigation Tabs -->
-    <nav>
-      <ul>
-        <li><a href="/Welcome" hx-get="/welcome" hx-target="#content">Welcome</a></li>
-        <li><a href="/Blog" hx-get="/blog" hx-target="#content">Blog</a></li>
-        <li><a href="/Projects" hx-get="/projects" hx-target="#content">Projects</a></li>
-        <li><a href="/Failures" hx-get="/failures" hx-target="#content">Failures</a></li>
-        <li><a href="/Credits" hx-get="/credits" hx-target="#content">Credits</a></li>
-      </ul>
-    </nav>
+    <div class="navagation">
+      <nav>
+        <ul class="navagation-links">
+          <li><a href="./Welcome.html" hx-get="/welcome" hx-target="#content">Welcome</a></li>
+          <li><a href="./Blog.html" hx-get="/blog" hx-target="#content">Blog</a></li>
+          <li><a href="./Projects.html" hx-get="/projects" hx-target="#content">Projects</a></li>
+          <li><a href="./Failures.html" hx-get="/failures" hx-target="#content">Failures</a></li>
+          <li><a href="./Credits.html" hx-get="/credits" hx-target="#content">Credits</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main id="content">
-    <!-- Main content will be loaded here by HTMX -->
+  <main>
+    <div class="content">
+      <!--
+        htmx hot-load content
+      -->
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2023 Your Website</p>
+    <div class="footer">
+      <div class="row">
+        <div class="col-md-4">
+          <a href="#"><img src="your-logo.png" alt="Your Brand Name"></a>
+        </div>
+        <div class="col-md-4">
+          <ul class="social-links">
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-github"></i></a></li>
+          </ul>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>&copy; 2023 Your Name. All rights reserved.</p>
+          </div>
+        </div>
+     </div>
   </footer>
-  <!-- <script src="/static/js/main.js"></script>  -->
-  </body>
-
+</body>
 </html>
