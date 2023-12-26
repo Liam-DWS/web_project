@@ -5,7 +5,8 @@ html {
 }
 
 .navagation div {
-  display: inline-block;
+  display: flex;
+
 }
 
 .navagation-links {
@@ -33,7 +34,12 @@ footer {
   padding: 0;
 }
 
-.social-links li a {
+.social-links li {
+  display: inline-block;
   color: white;
 }
 
+.social-links img {
+  max-width: 25%;
+  max-height: 25%;
+}
